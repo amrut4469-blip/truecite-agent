@@ -1,0 +1,5 @@
+Create README.md for TrueCite: a research agent that answers a question with citations and verifies each quote against the fetched source page. tools.py fetches pages, verify.py verifies quotes. Keep it under 20 lines. Do not read .env.
+
+---
+
+Now run: git add README.md tools.py verify.py && git commit -m "feat: add page fetch, quote verification and README" && git push
