@@ -1,0 +1,97 @@
+{
+  "question": "What is UPI in India and how did its usage grow?",
+  "agent_version": "v1",
+  "started_at": "2026-10-11T13:05:53",
+  "events": [
+    {
+      "t": 60.43,
+      "kind": "llm_call",
+      "model": "gemini-3.8-flash",
+      "attempt": 1,
+      "seconds": 60.41,
+      "tokens": 311
+    },
+    {
+      "t": 60.43,
+      "kind": "plan",
+      "search_terms": [
+        "Unified Payments Interface",
+        "Digital payments in India"
+      ]
+    },
+    {
+      "t": 76.49,
+      "kind": "fetch",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "ok": true,
+      "error": null
+    },
+    {
+      "t": 121.32,
+      "kind": "llm_call",
+      "model": "gemini-3.8-flash",
+      "attempt": 1,
+      "seconds": 42.5,
+      "tokens": 3642
+    },
+    {
+      "t": 121.32,
+      "kind": "verify",
+      "claim": "UPI is an Indian instant payment system developed by the NPCI.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 121.32,
+      "kind": "verify",
+      "claim": "UPI transaction volume grew nearly 13,000-fold, reaching 241.62 billion transactions in FY 2025–26.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 121.33,
+      "kind": "verify",
+      "claim": "As of 2025, UPI makes up 84% of digital payments in India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 121.33,
+      "kind": "verify",
+      "claim": "UPI processes more than 640 million transactions each day, surpassing Visa.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    }
+  ],
+  "answer": "Unified Payments Interface (UPI) is an Indian instant payment system developed by the National Payments Corporation of India (NPCI) that facilitates inter-bank peer-to-peer and person-to-merchant transactions. Since its launch, its usage expanded massively to reach over 500 million active users by 2021, grew its transaction volume by nearly 13,000-fold by FY 2025–26, and came to account for 84% of all digital payments in India, handling over 640 million daily transactions.",
+  "claims": [
+    {
+      "claim": "UPI is an Indian instant payment system developed by the NPCI.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "Unified Payments Interface ( UPI ) is an Indian instant payment system and protocol developed by the National Payments Corporation of India (NPCI) in April 11th 2016.",
+      "verified": true
+    },
+    {
+      "claim": "UPI transaction volume grew nearly 13,000-fold, reaching 241.62 billion transactions in FY 2025–26.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "In terms of number of transactions, there has been almost a 13000 fold increase in transactions with 241.62 billion transactions concluded in FY 2025–26.",
+      "verified": true
+    },
+    {
+      "claim": "As of 2025, UPI makes up 84% of digital payments in India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "As of 2025, UPI accounts for 84% of digital payments in India.",
+      "verified": true
+    },
+    {
+      "claim": "UPI processes more than 640 million transactions each day, surpassing Visa.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "UPI is the largest real-time payment system in the world. it handles more than 640 million transactions every day, compared to Visa's 639 million.",
+      "verified": true
+    }
+  ],
+  "claims_total": 4,
+  "claims_verified": 4,
+  "unverified_in_final": 0,
+  "duration_s": 121.33
+}
