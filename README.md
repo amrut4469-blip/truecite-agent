@@ -30,3 +30,4 @@ Gemini errors (503): `llm.py` retries, then falls back to a second model.
 - cfo.ai: not used. Signup needs a card and I could not provide one, so there is no cfo.ai business plan.
 - neatlogs showed some traces as processing or incomplete (platform ingestion issue on Oct 11), so local JSON reports are kept as backup.
 - Small evaluation: one question, one run per version.
+- Own cost notes (not cfo.ai): `docs/cost_plan.md`
