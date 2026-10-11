@@ -9,6 +9,7 @@ from verify import verify_quote
 from report import RunReport
 
 DEFAULT_Q = "What is UPI in India and how did its usage grow?"
+VERSION = "v2" if "--v2" in sys.argv else "v1"
 
 
 def parse_json(text):
@@ -55,7 +56,7 @@ def compose(question, pages, report):
 
 @span(kind="WORKFLOW", name="truecite_run")
 def run(question):
-    report = RunReport(question, "v1")
+    report = RunReport(question, VERSION)
     try:
         terms = plan(question, report)
         report.event("plan", search_terms=terms)
@@ -70,7 +71,12 @@ def run(question):
             checked.append({**c, "verified": ok})
         total = len(checked)
         good = sum(c["verified"] for c in checked)
-        report.set("answer", out["answer"])
+        if VERSION == "v2":
+            # v2: final answer is built ONLY from verified claims
+            final = " ".join(c["claim"] for c in checked if c["verified"])
+        else:
+            final = out["answer"]
+        report.set("answer", final)
         report.set("claims", checked)
         report.set("claims_total", total)
         report.set("claims_verified", good)
@@ -85,4 +91,5 @@ def run(question):
 
 
 if __name__ == "__main__":
-    run(" ".join(sys.argv[1:]) or DEFAULT_Q)
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    run(" ".join(args) or DEFAULT_Q)
