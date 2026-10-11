@@ -1,0 +1,104 @@
+{
+  "question": "What is UPI in India and how did its usage grow?",
+  "agent_version": "v2",
+  "started_at": "2026-10-11T13:43:43",
+  "events": [
+    {
+      "t": 15.84,
+      "kind": "llm_call",
+      "model": "gemini-3.8-flash",
+      "attempt": 1,
+      "seconds": 15.82,
+      "tokens": 619
+    },
+    {
+      "t": 15.84,
+      "kind": "plan",
+      "search_terms": [
+        "Unified Payments Interface",
+        "National Payments Corporation of India"
+      ]
+    },
+    {
+      "t": 22.52,
+      "kind": "fetch",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "ok": true,
+      "error": null
+    },
+    {
+      "t": 29.22,
+      "kind": "fetch",
+      "url": "https://en.wikipedia.org/wiki/National_Payments_Corporation_of_India",
+      "ok": true,
+      "error": null
+    },
+    {
+      "t": 42.04,
+      "kind": "llm_call",
+      "model": "gemini-3.8-flash",
+      "attempt": 1,
+      "seconds": 12.82,
+      "tokens": 5333
+    },
+    {
+      "t": 42.04,
+      "kind": "verify",
+      "claim": "UPI is an Indian instant payment system and protocol created by the National Payments Corporation of India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 42.04,
+      "kind": "verify",
+      "claim": "UPI transaction volume experienced an almost 13,000-fold increase, reaching 241.62 billion transactions in FY 2025–26.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 42.05,
+      "kind": "verify",
+      "claim": "As of 2025, UPI represents 84% of all digital payments in India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    },
+    {
+      "t": 42.05,
+      "kind": "verify",
+      "claim": "By 2025, half of the world's digital transactions were handled by India's UPI platform.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "verified": true
+    }
+  ],
+  "answer": "UPI is an Indian instant payment system and protocol created by the National Payments Corporation of India. UPI transaction volume experienced an almost 13,000-fold increase, reaching 241.62 billion transactions in FY 2025–26. As of 2025, UPI represents 84% of all digital payments in India. By 2025, half of the world's digital transactions were handled by India's UPI platform.",
+  "claims": [
+    {
+      "claim": "UPI is an Indian instant payment system and protocol created by the National Payments Corporation of India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "Unified Payments Interface ( UPI ) is an Indian instant payment system and protocol developed by the National Payments Corporation of India (NPCI) in April 11th 2016.",
+      "verified": true
+    },
+    {
+      "claim": "UPI transaction volume experienced an almost 13,000-fold increase, reaching 241.62 billion transactions in FY 2025–26.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "In terms of number of transactions, there has been almost a 13000 fold increase in transactions with 241.62 billion transactions concluded in FY 2025–26.",
+      "verified": true
+    },
+    {
+      "claim": "As of 2025, UPI represents 84% of all digital payments in India.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "As of 2025, UPI accounts for 84% of digital payments in India.",
+      "verified": true
+    },
+    {
+      "claim": "By 2025, half of the world's digital transactions were handled by India's UPI platform.",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "quote": "As of 2025, 50% of the world's digital transactions are conducted by India's UPI platform with over 250 billion annual transactions worth US$3.4 trillion.",
+      "verified": true
+    }
+  ],
+  "claims_total": 4,
+  "claims_verified": 4,
+  "unverified_in_final": 0,
+  "duration_s": 42.05
+}
